@@ -98,41 +98,50 @@ nav a:hover::after {
 
 .hero-text {
   max-width: 600px;
-}
+/* ALBUM BLOCK */
+
 .album-link {
   display: inline-block;
-  margin: 24px 0;
+  text-decoration: none;
 }
 
+.album-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* COVER */
 .album-cover {
   width: 220px;
   max-width: 70vw;
 
   border: none;
-
   filter: grayscale(100%) contrast(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12); /* subtle shade */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 
   transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
-
-   .album-wrapper {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
 }
 
+/* TITLE UNDER THE COVER */
 .album-title-image {
-  margin-top: 14px;   /* space from cover */
-  width: 120px;       /* smaller, caption-like */
-  max-width: 60%;
+  position: static;        /* IMPORTANT: kills overlay behavior */
+  margin-top: 18px;
+  width: 110px;            /* smaller caption size */
+  max-width: 55%;
   opacity: 0.9;
+  transform: none;         /* reset any transforms */
+  pointer-events: none;
 }
 
-}
-
+/* Hover life */
 .album-link:hover .album-cover {
   filter: grayscale(0%) contrast(1.05);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+.album-link:hover .album-title-image {
+  opacity: 1;
 }
 
 
