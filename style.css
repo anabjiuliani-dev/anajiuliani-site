@@ -278,17 +278,27 @@ footer {
   font-size: 0.75rem;
 }
 
-/* SOCIAL LINKS */
+/* SOCIAL LINKS — FORCE NEWSPAPER STYLE */
 
-.socials a {
-  color: black;
-  text-decoration: none;
+.socials,
+.socials li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socials a,
+.socials a:visited {
+  color: black !important;
+  text-decoration: none !important;
   font-family: 'News';
   font-size: 0.75rem;
   letter-spacing: 1px;
   text-transform: uppercase;
 }
 
-.socials a:hover {
+.socials a:hover,
+.socials a:active {
   text-decoration: underline;
+  color: black;
 }
