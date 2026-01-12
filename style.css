@@ -294,7 +294,7 @@ footer {
   font-family: 'News';
   font-size: 0.75rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
+  text-transform: lowercase;
 }
 
 .socials a:hover,
