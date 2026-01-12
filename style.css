@@ -278,7 +278,7 @@ footer {
   font-size: 0.75rem;
 }
 
-/* SOCIAL LINKS — LOWERCASE + STACKED */
+/* SOCIAL LINKS — FORCE STACKED, LOWERCASE */
 
 .socials {
   list-style: none;
@@ -287,11 +287,14 @@ footer {
 }
 
 .socials li {
-  margin-bottom: 6px;
+  display: block !important;
+  margin-bottom: 8px;
 }
 
 .socials a,
 .socials a:visited {
+  display: inline-block;
+
   color: black !important;
   text-decoration: none !important;
 
