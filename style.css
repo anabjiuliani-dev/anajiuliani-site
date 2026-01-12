@@ -1,185 +1,149 @@
-/* --- General Styles --- */
+/* Fonts */
+@font-face {
+  font-family: 'OldNewspaper';
+  src: url('https://raw.githubusercontent.com/anabjiuliani-dev/fonts/main/OldNewspaperTypes.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ZaiCalligraphy';
+  src: url('https://raw.githubusercontent.com/anabjiuliani-dev/fonts/main/zai_CalligraphyScriptHandwritten.ttf') format('truetype');
+}
+
 body {
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'OldNewspaper', serif;
   margin: 0;
-  background-color: #fffdf8;
-  color: #222;
-  line-height: 1.6;
+  padding: 0;
+  background-color: #FFC0CB; /* pink */
+  color: #1E1E1E;
 }
 
-/* --- Navigation --- */
-.nav {
+/* Header / Navbar */
+nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  justify-content: center;
+  gap: 30px;
   background-color: #fff;
-  border-bottom: 2px solid #f1f1f1;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  padding: 15px 0;
+  border-bottom: 2px solid #1E1E1E;
+  font-weight: bold;
 }
 
-.nav-logo {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
-  font-size: 1.5rem;
-  letter-spacing: 2px;
-}
-
-.nav-links a {
+nav a {
   text-decoration: none;
-  margin-left: 2rem;
-  color: #222;
-  font-weight: 500;
+  color: #1E1E1E;
   transition: color 0.3s;
 }
 
-.nav-links a:hover {
-  color: hotpink;
-  border-bottom: 2px solid hotpink;
+nav a:hover {
+  color: #FF69B4;
 }
 
-/* --- Hero Section --- */
-.hero {
+/* Big Name Header */
+.header {
   text-align: center;
-  padding: 4rem 2rem;
-  background-color: #fdf6f0;
+  font-family: 'ZaiCalligraphy', cursive;
+  font-size: 60px;
+  margin: 40px 0;
 }
 
-.hero-title {
-  font-size: 3rem;
-  letter-spacing: 2px;
-  margin: 0;
-}
-
-.hero-subtitle {
-  font-size: 1.2rem;
-  margin: 0.5rem 0 2rem;
-  color: #555;
-}
-
-.hero-image {
-  max-width: 300px;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
-  transition: transform 0.5s;
-}
-
-.hero-image:hover {
-  transform: scale(1.05);
-}
-
-/* --- News Section --- */
-.news-section {
-  padding: 4rem 2rem;
-  background-color: #fff;
-}
-
-.news-section h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.news-cards {
+/* Lyric Cloud */
+.lyrics {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
+  margin: 40px 20px;
+  text-align: center;
 }
 
-.news-card {
-  background-color: #fff8f3;
-  padding: 1.5rem;
-  border: 1px solid #eee;
-  border-radius: 10px;
-  width: 300px;
-  transition: transform 0.3s, box-shadow 0.3s;
+.lyrics span {
+  margin: 5px 10px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
 
-.news-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+@media (hover: hover) {
+  .lyrics span:hover { opacity: 0.8; }
 }
 
-.news-card h3 {
-  margin-top: 0;
-  font-family: 'Montserrat', sans-serif;
+@media (hover: none) {
+  .lyrics span {
+    opacity: 0.8;
+    font-size: 16px;
+    margin: 8px 0;
+  }
 }
 
-/* Buttons */
-.btn {
-  display: inline-block;
+/* Socials */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.socials a {
   text-decoration: none;
-  background-color: hotpink;
-  color: white;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  color: inherit;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
-.btn:hover {
-  background-color: #ff69b4;
-}
+.socials a:hover { color: #FF69B4; }
 
-/* --- Tracks Section --- */
-.tracks-preview {
-  padding: 4rem 2rem;
-  background-color: #fffdf8;
-  text-align: center;
-}
-
-.track-cards {
+/* Track list style */
+.track-list {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.track-card {
-  background-color: #fff8f3;
-  padding: 1rem;
-  border-radius: 10px;
-  width: 220px;
-}
-
-/* --- Signup Section --- */
-.signup-section {
-  padding: 4rem 2rem;
+.track-list div {
   background-color: #fff;
-  text-align: center;
-}
-
-.signup-form input {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  margin-right: 0.5rem;
-}
-
-.signup-form button {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  border-radius: 5px;
-  border: none;
-  background-color: hotpink;
-  color: white;
+  padding: 15px;
+  border-left: 4px solid #FF69B4;
   cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.track-list div:hover {
+  transform: scale(1.05);
+  background-color: #ffe6f0;
+}
+
+/* Form (Sign-up) */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+  gap: 15px;
+}
+
+input, button {
+  padding: 12px;
+  border: 2px solid #1E1E1E;
+  font-size: 16px;
+  font-family: 'OldNewspaper', serif;
+}
+
+button {
+  background-color: #FF69B4;
+  color: #fff;
+  cursor: pointer;
+  border: none;
   transition: background-color 0.3s;
 }
 
-.signup-form button:hover {
-  background-color: #ff69b4;
+button:hover {
+  background-color: #ff4da6;
 }
 
-/* --- Footer --- */
+/* Footer */
 footer {
   text-align: center;
-  padding: 2rem;
-  background-color: #fdf6f0;
-  font-size: 0.9rem;
-  color: #555;
+  margin: 40px 0;
+  font-size: 14px;
 }
