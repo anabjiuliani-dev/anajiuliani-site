@@ -345,33 +345,3 @@ padding-bottom: 2px;
   filter: grayscale(0%);
   transform: rotate(-1deg);  /* subtle “printed crooked” feel */
 }
-
-.release-title {
-  margin-bottom: 16px;
-}
-
-/* Wrapper to allow layering */
-.album-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-/* Album name printed over the image */
-.album-name {
-  position: absolute;
-  bottom: -12px;          /* slightly overlapping */
-  left: 50%;
-  transform: translateX(-50%);
-
-  background: #f5f5f5;    /* paper feel */
-  padding: 4px 10px;
-
-  font-size: 1.6rem;
-  border: 1px solid black;
-  white-space: nowrap;
-}
-
-/* Slight hover imperfection */
-.album-link:hover .album-name {
-  transform: translateX(-50%) rotate(-1deg);
-}
