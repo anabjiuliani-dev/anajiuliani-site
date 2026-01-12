@@ -91,6 +91,9 @@ nav a:hover::after {
   justify-content: center; /* horizontal center */
   text-align: center;
   min-height: 60vh;        /* gives it presence without being huge */
+  margin-bottom: 160px;
+}
+
 }
 
 .hero-text {
