@@ -17,6 +17,15 @@
   src: url("fonts/OldNewspaperTypes.ttf");
 }
 
+@font-face {
+  font-family: 'Wonderland';
+  src: url("fonts/Beyond Wonderland.ttf");
+}
+
+@font-face {
+  font-family: 'Exmouth';
+  src: url("fonts/exmouth_.ttf");
+}
 /* =========================
    GLOBAL RESET
 ========================= */
