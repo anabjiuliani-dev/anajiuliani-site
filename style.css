@@ -126,12 +126,21 @@ nav a:hover::after {
 ========================= */
 
 .button {
-  border: 1px solid black;
-  padding: 8px 16px;
-  display: inline-block;
-  text-decoration: none;
-  color: black;
+ display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+
+  font-family: 'News';
   font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: black;
+  border: 1px solid black;
+  background: transparent;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
 }
 
 .paper-button {
