@@ -316,3 +316,16 @@ padding-bottom: 2px;
 }
 
 }
+
+.hero {
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center */
+  text-align: center;
+  min-height: 60vh;        /* gives it presence without being huge */
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
