@@ -113,7 +113,7 @@ nav a:hover::after {
 
 /* COVER */
 .album-cover {
-  width: 220px;
+  width: 200px;
   max-width: 70vw;
 
   border: none;
@@ -127,7 +127,7 @@ nav a:hover::after {
 .album-title-image {
   position: static;        /* IMPORTANT: kills overlay behavior */
   margin-top: 18px;
-  width: 110px;            /* smaller caption size */
+  width: 80px;            /* smaller caption size */
   max-width: 55%;
   opacity: 0.9;
   transform: none;         /* reset any transforms */
