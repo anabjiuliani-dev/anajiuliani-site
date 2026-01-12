@@ -1,15 +1,25 @@
+/* =========================
+   FONTS
+========================= */
+
 @font-face {
-  font-family: Zai;
+  font-family: 'Zai';
   src: url("fonts/zai_CalligraphyScriptHandwritten.ttf");
 }
+
 @font-face {
-  font-family: Antro;
+  font-family: 'Antro';
   src: url("fonts/Antro_Vectra.otf");
 }
+
 @font-face {
-  font-family: News;
+  font-family: 'News';
   src: url("fonts/OldNewspaperTypes.ttf");
 }
+
+/* =========================
+   GLOBAL RESET
+========================= */
 
 * {
   box-sizing: border-box;
@@ -20,25 +30,37 @@ body {
   margin: 0;
   background: #f5f5f5;
   color: #111;
-  font-family: News;
+  font-family: 'News';
+  font-size: 16px;
+  line-height: 1.5;
 }
 
+/* =========================
+   HEADER / NAV
+========================= */
+
 .masthead {
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid black;
   padding: 20px;
   text-align: center;
 }
 
 .logo {
-  font-family: Zai;
+  font-family: 'Zai';
   font-size: 3rem;
+  margin: 0;
 }
 
 nav a {
   margin: 0 10px;
   text-decoration: none;
   color: black;
+  font-size: 0.9rem;
 }
+
+/* =========================
+   HERO / HOME
+========================= */
 
 .hero {
   padding: 80px 20px;
@@ -46,21 +68,40 @@ nav a {
 }
 
 .hero h2 {
-  font-family: Zai;
-  font-size: 2.5rem;
+  font-family: 'Zai';
+  font-size: 2.4rem;
+  margin-bottom: 20px;
 }
 
-.handwritten {
-  font-family: Antro;
-  font-size: 1.3rem;
+.hero p {
+  max-width: 600px;
 }
+
+/* =========================
+   HANDWRITTEN ACCENTS
+========================= */
+
+.handwritten {
+  font-family: 'Antro';
+  font-size: 3.2rem; /* controlled */
+  text-align: center;
+  margin: 0;
+}
+
+/* =========================
+   LAYOUT / COLUMNS
+========================= */
 
 .columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 30px;
   gap: 30px;
 }
+
+/* =========================
+   BUTTONS
+========================= */
 
 .button {
   border: 1px solid black;
@@ -68,11 +109,39 @@ nav a {
   display: inline-block;
   text-decoration: none;
   color: black;
+  font-size: 0.85rem;
 }
+
+.paper-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 12px 28px;
+
+  font-family: 'News';
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: black;
+  border: 1px solid black;
+  background: transparent;
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+}
+
+.paper-button:hover {
+  background: black;
+  color: white;
+}
+
+/* =========================
+   TRACKS
+========================= */
 
 .track-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,200px);
+  grid-template-columns: repeat(auto-fit, 200px);
   gap: 40px;
   padding: 40px;
 }
@@ -89,23 +158,28 @@ nav a {
   left: 0;
   width: 200px;
   opacity: 0;
-  transition: opacity .3s;
+  transition: opacity 0.3s ease;
 }
 
 .track:hover img {
   opacity: 1;
 }
 
+/* =========================
+   VIDEO / "MORE TO COME"
+========================= */
+
 .center-note {
   text-align: center;
-  padding: 100px 20px;
+  padding: 120px 20px;
 }
 
-/* SIGN UP PAGE */
+/* =========================
+   SIGN UP PAGE
+========================= */
 
 .signup-page {
   background: #f5f5f5;
-  color: #111;
 }
 
 .paper-header {
@@ -114,15 +188,9 @@ nav a {
   padding: 40px 20px;
 }
 
-.masthead {
-  font-family: 'Zai';
-  font-size: 3rem;
-  letter-spacing: 2px;
-}
-
 .subhead {
-  font-family: 'OldNewspaper';
-  font-size: 0.9rem;
+  font-family: 'News';
+  font-size: 0.8rem;
   text-transform: uppercase;
 }
 
@@ -136,13 +204,12 @@ nav a {
 
 .signup-title {
   font-family: 'Zai';
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   margin-bottom: 20px;
 }
 
 .signup-text {
-  font-family: 'OldNewspaper';
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: 1.6;
   margin-bottom: 40px;
 }
@@ -150,59 +217,27 @@ nav a {
 .signup-button {
   display: inline-block;
   font-family: 'Antro';
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-decoration: none;
   color: white;
   background: black;
   padding: 14px 30px;
-  border-radius: 2px;
   transition: all 0.3s ease;
 }
 
 .signup-button:hover {
-  background: #c2002f; /* subtle red pop */
+  background: #c2002f;
 }
 
 .signup-footnote {
   margin-top: 30px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-style: italic;
 }
 
 .paper-footer {
   text-align: center;
   padding: 40px;
-  font-size: 0.9rem;
-}
-.handwritten {
-  font-family: 'Antro';
-  font-size: 3.5rem; /* adjust size here */
-  text-align: center;
-}
-.center-note {
-  text-align: center;
-  margin-top: 120px;
+  font-size: 0.8rem;
 }
 
-.paper-button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 12px 28px;
-
-  font-family: 'OldNewspaper';
-  font-size: 0.9rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-
-  color: black;
-  border: 1px solid black;
-  background: transparent;
-  text-decoration: none;
-
-  transition: all 0.3s ease;
-}
-
-.paper-button:hover {
-  background: black;
-  color: white;
-}
