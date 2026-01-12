@@ -352,17 +352,3 @@ padding-bottom: 2px;
   filter: grayscale(0%) contrast(1.05);
   box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
 
-   /* Desktop-only typing cursor */
-@media (min-width: 768px) {
-  .typing-cursor::after {
-    content: "|";
-    margin-left: 4px;
-    animation: blink 1s infinite;
-  }
-
-  @keyframes blink {
-    0%, 50%, 100% { opacity: 1; }
-    25%, 75% { opacity: 0; }
-  }
-}
-
