@@ -174,3 +174,8 @@ nav a {
   padding: 40px;
   font-size: 0.9rem;
 }
+.handwritten {
+  font-family: 'Antro';
+  font-size: 3.5rem; /* adjust size here */
+  text-align: center;
+}
