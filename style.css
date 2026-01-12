@@ -272,3 +272,9 @@ nav a:hover::after {
   font-size: 0.8rem;
 }
 
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.75rem;
+}
+
