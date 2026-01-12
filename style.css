@@ -278,7 +278,7 @@ footer {
   font-size: 0.75rem;
 }
 
-/* SOCIAL LINKS — FORCE STACKED, LOWERCASE */
+/* SOCIAL LINKS — STACKED, OVERLINE, NEWSPAPER */
 
 .socials {
   list-style: none;
@@ -288,7 +288,7 @@ footer {
 
 .socials li {
   display: block !important;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .socials a,
@@ -299,13 +299,18 @@ footer {
   text-decoration: none !important;
 
   font-family: 'News';
-  font-size: 0.75rem;
-  letter-spacing: 0.5px;
+  font-size: 0.95rem; /* +0.2 from before */
+  letter-spacing: 0.6px;
   text-transform: lowercase;
+
+  border-top: 1px solid transparent;
+  padding-top: 2px;
+
+  transition: border-color 0.3s ease, opacity 0.3s ease;
 }
 
 .socials a:hover,
 .socials a:active {
-  text-decoration: underline;
-  color: black;
+  border-top: 1px solid black;
+  opacity: 0.85;
 }
