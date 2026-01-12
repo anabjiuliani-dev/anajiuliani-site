@@ -278,22 +278,26 @@ footer {
   font-size: 0.75rem;
 }
 
-/* SOCIAL LINKS — FORCE NEWSPAPER STYLE */
+/* SOCIAL LINKS — LOWERCASE + STACKED */
 
-.socials,
-.socials li {
+.socials {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.socials li {
+  margin-bottom: 6px;
 }
 
 .socials a,
 .socials a:visited {
   color: black !important;
   text-decoration: none !important;
+
   font-family: 'News';
   font-size: 0.75rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: lowercase;
 }
 
