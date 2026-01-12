@@ -85,6 +85,7 @@ nav a:hover::after {
 ========================= */
 
 .hero {
+   font-family: 'Zai';
   display: flex;
   align-items: center;     /* vertical center */
   justify-content: center; /* horizontal center */
