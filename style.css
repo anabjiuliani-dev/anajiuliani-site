@@ -303,14 +303,16 @@ footer {
   letter-spacing: 0.6px;
   text-transform: lowercase;
 
-  border-top: 1px solid transparent;
-  padding-top: 2px;
+  border-bottom: 2px solid transparent;
+padding-bottom: 2px;
 
   transition: border-color 0.3s ease, opacity 0.3s ease;
 }
 
 .socials a:hover,
 .socials a:active {
-  border-top: 1px solid black;
+  border-bottom: 2px solid black;
   opacity: 0.85;
+}
+
 }
