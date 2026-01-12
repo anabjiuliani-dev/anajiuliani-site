@@ -90,7 +90,7 @@ nav a:hover::after {
   align-items: center;     /* vertical center */
   justify-content: center; /* horizontal center */
   text-align: center;
-  min-height: 80vh;        /* gives it presence without being huge */
+  min-height: 60vh;        /* gives it presence without being huge */
 }
 
 .hero-text {
