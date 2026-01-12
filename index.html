@@ -1,44 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ana Jiuliani - Home</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ana Jiuliani - Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-logo">Ana ✦ Jiuliani</div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="tracks.html">Tracks</a>
+      <a href="signup.html">Sign Up</a>
+    </div>
+  </nav>
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="tracks.html">Tracks</a>
-  <a href="signup.html">Sign Up</a>
-</nav>
+  <!-- Header Hero -->
+  <header class="hero">
+    <h1 class="hero-title">Ana Jiuliani</h1>
+    <p class="hero-subtitle">Pop Singer & Songwriter | News, Tracks & Updates</p>
+    <img src="526a23c1-c446-4828-ac6d-1d7965d6f329.png" alt="Ana Jiuliani" class="hero-image">
+  </header>
 
-<div class="header">Ana ✦ Jiuliani</div>
+  <!-- Latest News Section -->
+  <section class="news-section">
+    <h2>Latest News</h2>
+    <div class="news-cards">
+      <article class="news-card">
+        <h3>New Single Released!</h3>
+        <p>Check out my latest track “Moonlight Dreams” now available on all streaming platforms.</p>
+        <a href="tracks.html" class="btn">Listen Now</a>
+      </article>
+      <article class="news-card">
+        <h3>Upcoming NYC Show</h3>
+        <p>Mark your calendars! Live performance at Brooklyn’s Music Hall on Feb 20th.</p>
+        <a href="#" class="btn">Tickets</a>
+      </article>
+      <article class="news-card">
+        <h3>Behind the Scenes</h3>
+        <p>A sneak peek into the making of my new music video.</p>
+        <a href="#" class="btn">Read More</a>
+      </article>
+    </div>
+  </section>
 
-<div class="lyrics">
-  <span>"dancing under city lights"</span>
-  <span>"midnight whispers"</span>
-  <span>"books in hand, coffee in heart"</span>
-  <span>"your laugh in my dreams"</span>
-  <span>"vinyl spinning all night"</span>
-  <span>"hearts on fire"</span>
-  <span>"soft blush mornings"</span>
-  <span>"stolen glances"</span>
-  <span>"moonlit secrets"</span>
-  <span>"lost in melodies"</span>
-  <span>"waiting for the weekend"</span>
-  <span>"your name on my lips"</span>
-</div>
+  <!-- Featured Tracks -->
+  <section class="tracks-preview">
+    <h2>Featured Tracks</h2>
+    <div class="track-cards">
+      <div class="track-card">
+        <h4>Moonlight Dreams</h4>
+        <audio controls>
+          <source src="tracks/moonlight.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div class="track-card">
+        <h4>City Lights</h4>
+        <audio controls>
+          <source src="tracks/citylights.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  </section>
 
-<div class="socials">
-  <a href="https://instagram.com/yourusername" target="_blank">Instagram</a>
-  <a href="https://twitter.com/yourusername" target="_blank">Twitter</a>
-  <a href="https://tiktok.com/@yourusername" target="_blank">TikTok</a>
-  <a href="https://youtube.com/@yourusername" target="_blank">YouTube</a>
-</div>
+  <!-- Newsletter Signup -->
+  <section class="signup-section">
+    <h2>Join the Newsletter</h2>
+    <p>Get exclusive updates, behind-the-scenes stories, and early track releases.</p>
+    <form action="signup.html" class="signup-form">
+      <input type="email" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
 
-<footer>© 2026 Ana Jiuliani</footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Ana Jiuliani. All Rights Reserved.</p>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
+
