@@ -85,73 +85,16 @@ nav a:hover::after {
 ========================= */
 
 .hero {
-   font-family: 'Zai';
+  font-family: 'Zai';
   display: flex;
-  align-items: center;     /* vertical center */
-  justify-content: center; /* horizontal center */
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  min-height: 60vh;        /* gives it presence without being huge */
+  min-height: 60vh;
   margin-bottom: 160px;
 }
 
-}
-
 .hero-text {
-  max-width: 600px;
-/* ALBUM BLOCK */
-
-.album-link {
-  display: inline-block;
-  text-decoration: none;
-}
-
-.album-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* COVER */
-.album-cover {
-  width: 200px;
-  max-width: 70vw;
-
-  border: none;
-  filter: grayscale(100%) contrast(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-
-  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* TITLE UNDER THE COVER */
-.album-title-image {
-  position: static;        /* IMPORTANT: kills overlay behavior */
-  margin-top: 18px;
-  width: 80px;            /* smaller caption size */
-  max-width: 55%;
-  opacity: 0.9;
-  transform: none;         /* reset any transforms */
-  pointer-events: none;
-}
-
-/* Hover life */
-.album-link:hover .album-cover {
-  filter: grayscale(0%) contrast(1.05);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
-}
-
-.album-link:hover .album-title-image {
-  opacity: 1;
-}
-
-
-.hero h2 {
-  font-family: 'Zai';
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-}
-
-.hero p {
   max-width: 600px;
 }
 
@@ -371,15 +314,40 @@ padding-bottom: 2px;
   opacity: 0.85;
 }
 
+/* =========================
+   ALBUM BLOCK
+========================= */
+
+.album-link {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .album-wrapper {
-  display: block !important;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.album-wrapper img {
-  display: block !important;
-  margin-left: auto;
-  margin-right: auto;
+/* COVER */
+.album-cover {
+  width: 220px;
+  max-width: 70vw;
+  border: none;
+  filter: grayscale(100%) contrast(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* TITLE UNDER THE COVER */
+.album-title-image {
+  margin-top: 18px;
+  width: 110px;
+  max-width: 55%;
+  opacity: 0.9;
+  pointer-events: none;
+}
+
+.album-link:hover .album-cover {
+  filter: grayscale(0%) contrast(1.05);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
