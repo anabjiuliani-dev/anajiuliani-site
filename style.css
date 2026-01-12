@@ -101,3 +101,76 @@ nav a {
   padding: 100px 20px;
 }
 
+/* SIGN UP PAGE */
+
+.signup-page {
+  background: #f5f5f5;
+  color: #111;
+}
+
+.paper-header {
+  text-align: center;
+  border-bottom: 2px solid black;
+  padding: 40px 20px;
+}
+
+.masthead {
+  font-family: 'Zai';
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.subhead {
+  font-family: 'OldNewspaper';
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.signup-container {
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 40px;
+  border: 1px solid black;
+  background: white;
+}
+
+.signup-title {
+  font-family: 'Zai';
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.signup-text {
+  font-family: 'OldNewspaper';
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.signup-button {
+  display: inline-block;
+  font-family: 'Antro';
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  background: black;
+  padding: 14px 30px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.signup-button:hover {
+  background: #c2002f; /* subtle red pop */
+}
+
+.signup-footnote {
+  margin-top: 30px;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.paper-footer {
+  text-align: center;
+  padding: 40px;
+  font-size: 0.9rem;
+}
