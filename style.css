@@ -1,0 +1,149 @@
+/* Fonts */
+@font-face {
+  font-family: 'OldNewspaper';
+  src: url('https://raw.githubusercontent.com/anabjiuliani-dev/fonts/main/OldNewspaperTypes.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ZaiCalligraphy';
+  src: url('https://raw.githubusercontent.com/anabjiuliani-dev/fonts/main/zai_CalligraphyScriptHandwritten.ttf') format('truetype');
+}
+
+body {
+  font-family: 'OldNewspaper', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFC0CB; /* pink */
+  color: #1E1E1E;
+}
+
+/* Header / Navbar */
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  background-color: #fff;
+  padding: 15px 0;
+  border-bottom: 2px solid #1E1E1E;
+  font-weight: bold;
+}
+
+nav a {
+  text-decoration: none;
+  color: #1E1E1E;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #FF69B4;
+}
+
+/* Big Name Header */
+.header {
+  text-align: center;
+  font-family: 'ZaiCalligraphy', cursive;
+  font-size: 60px;
+  margin: 40px 0;
+}
+
+/* Lyric Cloud */
+.lyrics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 40px 20px;
+  text-align: center;
+}
+
+.lyrics span {
+  margin: 5px 10px;
+  font-size: 14px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+@media (hover: hover) {
+  .lyrics span:hover { opacity: 0.8; }
+}
+
+@media (hover: none) {
+  .lyrics span {
+    opacity: 0.8;
+    font-size: 16px;
+    margin: 8px 0;
+  }
+}
+
+/* Socials */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 40px 0;
+}
+
+.socials a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.socials a:hover { color: #FF69B4; }
+
+/* Track list style */
+.track-list {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.track-list div {
+  background-color: #fff;
+  padding: 15px;
+  border-left: 4px solid #FF69B4;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.track-list div:hover {
+  transform: scale(1.05);
+  background-color: #ffe6f0;
+}
+
+/* Form (Sign-up) */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 20px auto;
+  gap: 15px;
+}
+
+input, button {
+  padding: 12px;
+  border: 2px solid #1E1E1E;
+  font-size: 16px;
+  font-family: 'OldNewspaper', serif;
+}
+
+button {
+  background-color: #FF69B4;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff4da6;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin: 40px 0;
+  font-size: 14px;
+}
