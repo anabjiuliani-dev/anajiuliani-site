@@ -374,4 +374,32 @@ padding-bottom: 2px;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
-}
+/* =========================
+   MOBILE SCALE FIX — VIDEO & SHOP
+========================= */
+
+@media (max-width: 768px) {
+
+  /* Center note sections (Video / Shop) */
+  .center-note {
+    padding: 160px 20px;
+  }
+
+  /* Handwritten text gets bigger on mobile */
+  .handwritten {
+    font-size: 3.8rem;
+    line-height: 1.1;
+  }
+
+  /* Page titles (like "Moving Pictures", "Shop") */
+  .logo {
+    font-size: 2.4rem;
+  }
+
+  /* Navigation tighter so content breathes */
+  nav a {
+    font-size: 0.7rem;
+    margin: 0 8px;
+  }
+
+
