@@ -342,8 +342,8 @@ padding-bottom: 2px;
 
 /* COVER */
 .album-cover {
-  width: 280px;          /* was 220px */
-  max-width: 85vw;       /* was 70vw */
+  width: 320px;          /* was 220px */
+  max-width: 95vw;       /* was 70vw */
   border: none;
   filter: grayscale(100%) contrast(1.05);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
