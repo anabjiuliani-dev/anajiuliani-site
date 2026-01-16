@@ -217,7 +217,7 @@ nav a:hover::after {
   width: 290px;
   max-width: 85vw;
   transform: rotate(-2deg);
-  filter: sepia(30%);
+  filter: greyscale(10%);
   box-shadow: 0 18px 40px var(--shadow-soft);
   transition: transform 0.6s ease, filter 0.4s ease;
 }
