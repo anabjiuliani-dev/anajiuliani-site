@@ -213,7 +213,7 @@ nav a:hover::after {
 }
 
 .album-cover {
-  width: 380px;
+  width: 290px;
   max-width: 85vw;
   transform: rotate(-2deg);
   filter: grayscale(90%);
