@@ -422,3 +422,16 @@ footer {
   color: var(--text-main);
   transform: translateX(4px);
 }
+/* =========================
+   SOFT BLOCK TITLES
+========================= */
+
+.soft-block h3 {
+  font-family: 'Zai';  /* elegant, humanist serif */
+  font-size: 2rem;                 /* bigger than before */
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+  color: var(--text-main);
+}
+
