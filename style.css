@@ -3,9 +3,9 @@
 ========================= */
 
 :root {
-  --honey: #9a7b55;
-  --cream: #f4efe8;
-  --dark-brown: #4a3322;
+  --bg-dark: #3b2a1e;
+  --text-cream: #f4efe8;
+  --hover-brown: #6b4a32;
   --dusty-shadow: rgba(74, 51, 34, 0.25);
 }
 
