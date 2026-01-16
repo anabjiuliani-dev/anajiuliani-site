@@ -3,11 +3,13 @@
 ========================= */
 
 :root {
-  --bg-dark: #2f2218;        /* deep brown */
-  --text-cream: #f4efe8;     /* warm cream */
-  --hover-brown: #5a3e2a;    /* lighter brown */
-  --shadow-soft: rgba(0, 0, 0, 0.25);
+  --bg-dark: #2a2018;        /* deep espresso brown */
+  --text-main: #e8dfd3;      /* warm parchment */
+  --text-soft: #cfc4b4;      /* softer secondary text */
+  --hover-brown: #4b3626;    /* warm chestnut hover */
+  --shadow-soft: rgba(0, 0, 0, 0.28);
 }
+
 
 /* =========================
    FONTS
