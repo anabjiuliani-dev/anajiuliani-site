@@ -510,3 +510,19 @@ footer {
   gap: 24px;               /* space between title and album */
   text-align: center;
 }
+/* =========================
+   BACK LINK
+========================= */
+
+.signup-back {
+  font-family: 'Zai', serif;
+  font-size: 1.4rem;
+  color: var(--bg-dark); /* brown text */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.signup-back:hover {
+  color: var(--text-main); /* optional: change to cream on hover */
+}
+
