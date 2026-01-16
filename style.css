@@ -459,28 +459,26 @@ footer {
   filter: grayscale(0%);
 }
 
-/* the hover button */
+/* =========================
+   ALBUM BUTTON — always visible
+========================= */
+
 .album-hover {
   position: absolute;
   bottom: 12px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: var(--hover-brown);
-  color: var(--text-main);
+  background-color: var(--hover-brown); /* your warm brown */
+  color: var(--text-main);             /* cream text */
   font-family: 'Antro', cursive;
   font-size: 1.1rem;
   padding: 8px 18px;
   border-radius: 12px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  cursor: pointer;
-}
-
-.album-wrapper:hover .album-hover {
-  opacity: 1;
   pointer-events: auto;
-  transform: translateX(-50%) translateY(-4px);
+  opacity: 1;                           /* always visible */
+  cursor: pointer;
+  text-align: center;
+
 }
 /* HERO TEXT STACKING */
 .hero-text {
