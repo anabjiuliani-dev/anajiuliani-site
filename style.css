@@ -59,7 +59,7 @@ body {
   margin: 0;
   background-color: var(--bg-dark);
   color: var(--text-main);
-  font-family: 'Exmouth';
+  font-family: 'Zai';
   font-size: 16px;
   line-height: 1.65;
 }
@@ -101,7 +101,7 @@ body::before {
 }
 
 .logo {
-  font-family: 'Zai';
+  font-family: 'Exmouth';
   font-size: 3rem;
   margin: 0;
 }
@@ -141,7 +141,7 @@ nav a:hover::after {
 ========================= */
 
 .hero {
-  font-family: 'News';
+  font-family: 'Zai';
   display: flex;
   align-items: center;
   justify-content: center;
@@ -289,7 +289,7 @@ nav a:hover::after {
 
 .video-whisper,
 .signup-whisper {
-  font-family: 'News';
+  font-family: 'Zai';
   font-size: 1.6rem;
   opacity: 0.9;
 }
