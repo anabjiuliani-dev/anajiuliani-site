@@ -1,43 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta charset="UTF-8">
-<title>Tracks — Ana Jiuliani</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <title>Tracks — Ana Jiuliani</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <!-- Favicon -->
-  <link rel="icon" href="images/favicon.png">
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-<header class="masthead">
-  <h1 class="logo">Tracks</h1>
- <nav>
-  <a href="index.html">Home</a>
-  <a href="tracks.html">Tracks</a>
-  <a href="video.html">Videos</a>
-  <a href="shop.html">Shop</a>
-</nav>
-</header>
+  <!-- ✦ HEADER -->
+  <header class="masthead">
+    <h1 class="logo">Tracks</h1>
 
-<section class="track-grid">
-  <a class="track" href="SMARTLINK_HERE" target="_blank">
-    <span>Track One</span>
-    <img src="images/album1.jpg" alt="Track One album cover">
-    
-  </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="video.html">Video</a>
+      <a href="shop.html">Shop</a>
+    </nav>
+  </header>
 
-  <a class="track" href="SMARTLINK_HERE" target="_blank">
-    <span>Track Two</span>
-    <img src="images/album2.jpg" alt="Track Two album cover">
-  </a>
-</section>
+  <!-- ✦ TRACK SPACE -->
+  <main class="tracks-soft">
 
-  <footer>
-  <p>© 2026 Ana Jiuliani. All Rights Reserved.</p>
- </footer>
-  
+    <p class="tracks-whisper">
+      songs, scattered
+    </p>
+
+    <section class="tracks-flow">
+
+      <!-- TRACK 01 -->
+      <a
+        class="track-card"
+        href="SMARTLINK_HERE"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="images/album1.jpg" alt="Track One cover" />
+        <span class="track-title">Track One</span>
+        <span class="track-star">✦</span>
+      </a>
+
+      <!-- TRACK 02 -->
+      <a
+        class="track-card offset"
+        href="SMARTLINK_HERE"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="images/album2.jpg" alt="Track Two cover" />
+        <span class="track-title">Track Two</span>
+        <span class="track-star">✦</span>
+      </a>
+
+      <!-- you can keep adding like this -->
+
+    </section>
+
+  </main>
+
+  <!-- ✦ FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Ana Jiuliani</p>
+  </footer>
+
+  <!-- ✦ AMBIENT STARS -->
+  <div class="stars">
+    <span>✦</span>
+    <span>✦</span>
+    <span>✦</span>
+  </div>
+
 </body>
 </html>
-
