@@ -470,7 +470,7 @@ footer {
   transform: translateX(-50%);
   background-color: var(--hover-brown); /* your warm brown */
   color: var(--text-main);             /* cream text */
-  font-family: 'Antro', cursive;
+  font-family: 'Zai', cursive;
   font-size: 1.1rem;
   padding: 8px 18px;
   border-radius: 12px;
