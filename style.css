@@ -470,7 +470,7 @@ footer {
   width: 380px;
   max-width: 85vw;
   transform: rotate(-2deg);
-  filter: grayscale(90%);
+  filter: grayscale(0%);
   box-shadow: 0 18px 40px var(--shadow-soft);
   transition: transform 0.6s ease, filter 0.4s ease;
 }
