@@ -302,7 +302,7 @@ nav a:hover::after {
 
 .video-whisper,
 .signup-whisper {
-  font-family: 'Exmouth', cursive;
+  font-family: 'Zai', cursive;
   font-size: 1.8rem; /* slightly bigger */
   opacity: 0.9;
   line-height: 1.4;
@@ -312,7 +312,7 @@ nav a:hover::after {
 .video-text,
 .signup-text {
   font-family: 'Zai', serif;
-  font-size: 1.2rem; /* slightly bigger */
+  font-size: 1.3rem; /* slightly bigger */
   opacity: 0.85;
   line-height: 1.5;
   max-width: 500px;
