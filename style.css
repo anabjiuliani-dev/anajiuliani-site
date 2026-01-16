@@ -476,7 +476,7 @@ footer {
 
 /* hover effect */
 .album-hover:hover {
-  color: var(--hover-brown);
+  color: var( --bg-dark);
 }
 
 }
