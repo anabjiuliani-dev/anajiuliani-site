@@ -6,7 +6,7 @@
   --bg-dark: #2a2018;        /* deep espresso brown */
   --text-main: #e8dfd3;      /* warm parchment */
   --text-soft: #cfc4b4;      /* softer secondary text */
-  --hover-brown: #4b3626;    /* warm chestnut hover */
+  --hover-brown: #2a2018;    /* warm chestnut hover */
   --shadow-soft: rgba(0, 0, 0, 0.28);
 }
 
@@ -317,7 +317,21 @@ nav a:hover::after {
   line-height: 1.5;
   max-width: 500px;
 }
+.video-soft-link,
+.signup-soft-button {
+  font-family: 'Exmouth', cursive;
+  font-size: 1.7rem;
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--text-main);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
 
+.video-soft-link:hover,
+.signup-soft-button:hover {
+  color: var(--hover-brown);
+  border-color: var(--hover-brown);
+}
 /* =========================
    FOOTER
 ========================= */
