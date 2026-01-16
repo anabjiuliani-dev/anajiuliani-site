@@ -30,6 +30,14 @@
   src: url("fonts/OldNewspaperTypes.ttf");
 }
 
+@font-face { font-family: 'Wonderland'; 
+            src: url("fonts/Beyond Wonderland.ttf"); 
+} 
+
+@font-face { font-family: 'Exmouth'; 
+            src: url("fonts/exmouth_.ttf"); 
+}
+
 /* =========================
    GLOBAL RESET
 ========================= */
@@ -51,7 +59,7 @@ body {
   margin: 0;
   background-color: var(--bg-dark);
   color: var(--text-main);
-  font-family: 'News';
+  font-family: 'Exmouth';
   font-size: 16px;
   line-height: 1.65;
 }
@@ -133,7 +141,7 @@ nav a:hover::after {
 ========================= */
 
 .hero {
-  font-family: 'Zai';
+  font-family: 'News';
   display: flex;
   align-items: center;
   justify-content: center;
@@ -225,7 +233,7 @@ nav a:hover::after {
 }
 
 .tracks-whisper {
-  font-family: 'Zai';
+  font-family: 'News';
   opacity: 0.8;
   margin-bottom: 60px;
 }
@@ -281,7 +289,7 @@ nav a:hover::after {
 
 .video-whisper,
 .signup-whisper {
-  font-family: 'Zai';
+  font-family: 'News';
   font-size: 1.6rem;
   opacity: 0.9;
 }
