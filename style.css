@@ -1,4 +1,15 @@
 /* =========================
+   VARIABLES — VISUAL SYSTEM
+========================= */
+
+:root {
+  --honey: #b08a5a;
+  --cream: #f4efe8;
+  --dark-brown: #4a3322;
+  --dusty-shadow: rgba(74, 51, 34, 0.25);
+}
+
+/* =========================
    FONTS
 ========================= */
 
@@ -26,22 +37,35 @@
   font-family: 'Exmouth';
   src: url("fonts/exmouth_.ttf");
 }
+
 /* =========================
    GLOBAL RESET
 ========================= */
 
 * {
   box-sizing: border-box;
-  cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32'><text y='20' font-size='20'>♥</text></svg>"), auto;
 }
 
 body {
   margin: 0;
-  background: #f5f5f5;
-  color: #111;
+  background-color: var(--honey);
+  color: var(--cream);
   font-family: 'News';
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
+}
+
+/* GRAIN / TEXTURE */
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+  opacity: 0.12;
+  mix-blend-mode: soft-light;
+  z-index: 999;
 }
 
 /* =========================
@@ -49,9 +73,9 @@ body {
 ========================= */
 
 .masthead {
-  border-bottom: 2px solid black;
-  padding: 20px;
   text-align: center;
+  padding: 24px;
+  border-bottom: 1px solid var(--dark-brown);
 }
 
 .logo {
@@ -60,10 +84,14 @@ body {
   margin: 0;
 }
 
+nav {
+  margin-top: 14px;
+}
+
 nav a {
   margin: 0 12px;
   text-decoration: none;
-  color: black;
+  color: var(--cream);
 
   font-family: 'News';
   font-size: 0.75rem;
@@ -72,25 +100,25 @@ nav a {
 
   position: relative;
 }
+
 nav a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -3px;
+  bottom: -4px;
   width: 100%;
   height: 1px;
-  background: black;
+  background: var(--dark-brown);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 nav a:hover::after {
-  opacity: 0.6;
+  opacity: 0.7;
 }
 
-
 /* =========================
-   HERO / HOME
+   HERO
 ========================= */
 
 .hero {
@@ -105,23 +133,22 @@ nav a:hover::after {
 
 .hero-text {
   max-width: 600px;
-  font-size: 1.3rem; /* slightly bigger text */
- 
+  font-size: 1.35rem;
 }
 
 /* =========================
-   HANDWRITTEN ACCENTS
+   HANDWRITTEN
 ========================= */
 
 .handwritten {
   font-family: 'Antro';
-  font-size: 3.2rem; /* controlled */
+  font-size: 3.2rem;
   text-align: center;
   margin: 0;
 }
 
 /* =========================
-   LAYOUT / COLUMNS
+   LAYOUT
 ========================= */
 
 .columns {
@@ -135,24 +162,7 @@ nav a:hover::after {
    BUTTONS
 ========================= */
 
-.button {
- display: inline-block;
-  margin-top: 30px;
-  padding: 12px 28px;
-
-  font-family: 'News';
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-
-  color: black;
-  border: 1px solid black;
-  background: transparent;
-  text-decoration: none;
-
-  transition: all 0.3s ease;
-}
-
+.button,
 .paper-button {
   display: inline-block;
   margin-top: 30px;
@@ -163,8 +173,8 @@ nav a:hover::after {
   letter-spacing: 1px;
   text-transform: uppercase;
 
-  color: black;
-  border: 1px solid black;
+  color: var(--cream);
+  border: 1px solid var(--cream);
   background: transparent;
   text-decoration: none;
 
@@ -172,8 +182,8 @@ nav a:hover::after {
 }
 
 .paper-button:hover {
-  background: black;
-  color: white;
+  background: var(--dark-brown);
+  color: var(--cream);
 }
 
 /* =========================
@@ -190,7 +200,7 @@ nav a:hover::after {
 .track {
   position: relative;
   text-decoration: none;
-  color: black;
+  color: var(--cream);
 }
 
 .track img {
@@ -207,7 +217,7 @@ nav a:hover::after {
 }
 
 /* =========================
-   VIDEO / "MORE TO COME"
+   CENTER NOTE
 ========================= */
 
 .center-note {
@@ -220,12 +230,12 @@ nav a:hover::after {
 ========================= */
 
 .signup-page {
-  background: #f5f5f5;
+  background: var(--honey);
 }
 
 .paper-header {
   text-align: center;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid var(--dark-brown);
   padding: 40px 20px;
 }
 
@@ -239,8 +249,9 @@ nav a:hover::after {
   max-width: 600px;
   margin: 60px auto;
   padding: 40px;
-  border: 1px solid black;
-  background: white;
+  background: var(--cream);
+  color: var(--dark-brown);
+  border: 1px solid var(--dark-brown);
 }
 
 .signup-title {
@@ -260,14 +271,14 @@ nav a:hover::after {
   font-family: 'Antro';
   font-size: 1.1rem;
   text-decoration: none;
-  color: white;
-  background: black;
+  color: var(--cream);
+  background: var(--dark-brown);
   padding: 14px 30px;
   transition: all 0.3s ease;
 }
 
 .signup-button:hover {
-  background: #c2002f;
+  background: #3a2719;
 }
 
 .signup-footnote {
@@ -276,19 +287,20 @@ nav a:hover::after {
   font-style: italic;
 }
 
-.paper-footer {
-  text-align: center;
-  padding: 40px;
-  font-size: 0.8rem;
-}
+/* =========================
+   FOOTER
+========================= */
 
-footer {
+footer,
+.paper-footer {
   text-align: center;
   padding: 40px 20px;
   font-size: 0.75rem;
 }
 
-/* SOCIAL LINKS — STACKED, OVERLINE, NEWSPAPER */
+/* =========================
+   SOCIAL LINKS
+========================= */
 
 .socials {
   list-style: none;
@@ -297,32 +309,20 @@ footer {
 }
 
 .socials li {
-  display: block !important;
   margin-bottom: 10px;
 }
 
-.socials a,
-.socials a:visited {
-  display: inline-block;
-
-  color: black !important;
-  text-decoration: none !important;
-
+.socials a {
+  color: var(--cream);
+  text-decoration: none;
   font-family: 'News';
-  font-size: 0.95rem; /* +0.2 from before */
-  letter-spacing: 0.6px;
-  text-transform: lowercase;
-
-  border-bottom: 2px solid transparent;
-padding-bottom: 2px;
-
-  transition: border-color 0.3s ease, opacity 0.3s ease;
+  font-size: 0.95rem;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
 }
 
-.socials a:hover,
-.socials a:active {
-  border-bottom: 2px solid black;
-  opacity: 0.85;
+.socials a:hover {
+  border-bottom-color: var(--dark-brown);
 }
 
 /* =========================
@@ -340,68 +340,55 @@ padding-bottom: 2px;
   align-items: center;
 }
 
-/* COVER */
 .album-cover {
-  width: 440px;          /* was 220px */
-  max-width: 140vw;       /* was 70vw */
-  border: none;
+  width: 440px;
+  max-width: 90vw;
   filter: grayscale(100%) contrast(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
-  transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 18px var(--dusty-shadow);
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* TITLE UNDER THE COVER */
 .album-title-image {
   margin-top: 18px;
   width: 110px;
-  max-width: 55%;
   opacity: 0.9;
-  pointer-events: none;
 }
 
 .album-link:hover .album-cover {
   filter: grayscale(0%) contrast(1.05);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
-
-/* =========================
-   MOBILE SIGNUP BUTTON FONT — FORCE
-========================= */
-
-@media screen and (max-width: 768px) {
-  .signup-container .signup-button {
-    font-family: 'News' !important;
-    font-size: 1rem;
-    letter-spacing: 1.2px;
-    text-transform: uppercase;
-  }
+  box-shadow: 0 10px 26px var(--dusty-shadow);
 }
 
 /* =========================
-   MOBILE SCALE FIX — VIDEO & SHOP
+   MOBILE
 ========================= */
 
 @media (max-width: 768px) {
 
-  /* Center note sections (Video / Shop) */
-  .center-note {
-    padding: 160px 20px;
+  .hero-text {
+    font-size: 1.5rem;
   }
 
-  /* Handwritten text gets bigger on mobile */
   .handwritten {
     font-size: 3.8rem;
-    line-height: 1.1;
   }
 
-  /* Page titles (like "Moving Pictures", "Shop") */
   .logo {
     font-size: 2.4rem;
   }
 
-  /* Navigation tighter so content breathes */
   nav a {
     font-size: 0.7rem;
     margin: 0 8px;
   }
 
+  .center-note {
+    padding: 160px 20px;
+  }
 
+  .signup-button {
+    font-family: 'News';
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+}
