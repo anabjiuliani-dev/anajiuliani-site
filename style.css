@@ -369,3 +369,61 @@ footer {
     gap: 60px;
   }
 }
+.soft-block {
+  text-align: center;
+  padding: 36px 28px;
+  border: 1px solid rgba(232, 223, 211, 0.25);
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(2px);
+}
+.soft-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 24px;
+  padding: 14px 36px;
+
+  font-size: 0.9rem;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+  color: var(--text-main);
+  border: 1px solid var(--text-main);
+  text-decoration: none;
+
+  background: rgba(0, 0, 0, 0.15);
+  transition: all 0.35s ease;
+}
+.soft-button:hover {
+  background: var(--hover-brown);
+  border-color: var(--hover-brown);
+}
+.soft-button .star {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.soft-button:hover .star {
+  transform: rotate(25deg) scale(1.1);
+  opacity: 1;
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.socials a {
+  color: var(--text-soft);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.6px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.socials a:hover {
+  color: var(--text-main);
+  transform: translateX(4px);
+}
