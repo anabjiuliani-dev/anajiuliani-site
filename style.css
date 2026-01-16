@@ -295,19 +295,27 @@ nav a:hover::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 26px;
+  gap: 32px; /* slightly bigger gap for breathing space */
   text-align: center;
+  padding: 60px 20px;
 }
 
 .video-whisper,
 .signup-whisper {
-  font-family: 'Zai';
-  font-size: 1.6rem;
+  font-family: 'Zai', cursive;
+  font-size: 1.8rem; /* slightly bigger */
   opacity: 0.9;
+  line-height: 1.4;
+  max-width: 600px;
 }
 
-.video-text {
+.video-text,
+.signup-text {
+  font-family: 'News', serif;
+  font-size: 1.2rem; /* slightly bigger */
   opacity: 0.85;
+  line-height: 1.5;
+  max-width: 500px;
 }
 
 /* =========================
