@@ -57,12 +57,29 @@ body {
 
 body {
   margin: 0;
-  background-color: var(--bg-dark);
   color: var(--text-main);
   font-family: 'Zai';
-  font-size: 16px;
-  line-height: 1.65;
+  font-size: 18px;
+  line-height: 1.7;
+
+  background:
+    linear-gradient(
+      rgba(42, 32, 24, 0.85),
+      rgba(42, 32, 24, 0.85)
+    ),
+    url("images/bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
+
+  color: var(--text-main);
+  font-family: 'Zai';
+  font-size: 18px; /* bigger base */
+  line-height: 1.7;
+}
+
 
 
 /* =========================
@@ -96,7 +113,7 @@ body::before {
 
 .masthead {
   text-align: center;
-  padding: 26px 20px;
+  padding: 18px 20px 14px;
   border-bottom: 1px solid rgba(244, 239, 232, 0.25);
 }
 
@@ -145,12 +162,13 @@ nav a:hover::after {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 60vh;
+   min-height: 52vh;
+  padding-top: 20px;
 }
 
 .hero-text {
-  max-width: 640px;
-  font-size: 1.4rem;
+  max-width: 680px;
+  font-size: 1.8rem;
 }
 
 /* =========================
@@ -161,7 +179,7 @@ nav a:hover::after {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 40px;
-  padding: 60px 40px;
+ padding: 40px 40px;
 }
 
 /* =========================
@@ -175,8 +193,8 @@ nav a:hover::after {
   padding: 12px 28px;
   font-size: 0.85rem;
   letter-spacing: 1px;
-  color: var(--text-cream);
-  border: 1px solid var(--text-cream);
+  color: var(--text-main);
+  border: 1px solid var(--text-main);
   background: transparent;
   text-decoration: none;
   transition: all 0.3s ease;
