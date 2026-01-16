@@ -41,19 +41,21 @@
 /* STAR CURSOR */
 body {
   cursor: url("data:image/svg+xml;utf8,\
-<svg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'>\
-<polygon points='16,2 20,12 30,16 20,20 16,30 12,20 2,16 12,12' fill='%23f4efe8'/>\
-</svg>") 16 16, auto;
+<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24'>\
+<path d='M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z' fill='%23e8dfd3'/>\
+</svg>") 9 9, auto;
 }
+
 
 body {
   margin: 0;
   background-color: var(--bg-dark);
-  color: var(--text-cream);
+  color: var(--text-main);
   font-family: 'News';
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.65;
 }
+
 
 /* =========================
    GRAIN OVERLAY
@@ -93,7 +95,7 @@ nav {
 nav a {
   margin: 0 12px;
   text-decoration: none;
-  color: var(--text-cream);
+  color: var(--text-soft);
   font-size: 0.75rem;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -107,7 +109,7 @@ nav a::after {
   bottom: -4px;
   width: 100%;
   height: 1px;
-  background: var(--hover-brown);
+  background: var(--text-main);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
