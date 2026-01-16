@@ -155,16 +155,17 @@ nav a:hover::after {
 .hero {
   font-family: 'Zai';
   display: flex;
-  align-items: center;
+  align-items: flex-start;  /* align text closer to top */
   justify-content: center;
   text-align: center;
-   min-height: 52vh;
-  padding-top: 9px;
+  min-height: 40vh;         /* reduce height so it’s closer */
+  margin-top: 20px;         /* optional spacing from header */
+  padding: 0;               /* remove previous padding */
 }
 
 .hero-text {
   max-width: 680px;
-  font-size: 1.2rem;
+  font-size: 1.3rem;        /* slightly bigger if needed */
 }
 
 /* =========================
