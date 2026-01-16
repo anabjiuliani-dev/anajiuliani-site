@@ -319,7 +319,7 @@ nav a:hover::after {
 }
 .video-soft-link,
 .signup-soft-button {
-  font-family: 'Exmouth', cursive;
+  font-family: 'Exmouth';
   font-size: 1.7rem;
   color: var(--text-main);
   text-decoration: none;
@@ -329,7 +329,7 @@ nav a:hover::after {
 
 .video-soft-link:hover,
 .signup-soft-button:hover {
-  color: var(--hover-brown);
+  color: var(--text-main);
   border-color: var(--hover-brown);
 }
 /* =========================
