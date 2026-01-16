@@ -482,3 +482,11 @@ footer {
   pointer-events: auto;
   transform: translateX(-50%) translateY(-4px);
 }
+/* HERO TEXT STACKING */
+.hero-text {
+  display: flex;           /* if not already */
+  flex-direction: column;  /* stack children vertically */
+  align-items: center;     /* center horizontally */
+  gap: 24px;               /* space between title and album */
+  text-align: center;
+}
