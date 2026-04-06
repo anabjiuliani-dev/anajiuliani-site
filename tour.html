@@ -43,47 +43,6 @@
     </article>
 
   </main>
-<script>
-async function showGeo() {
-  let country = "";
-  let code = "";
 
-  try {
-    const res = await fetch("https://ipwho.is/");
-    const data = await res.json();
-
-    if (data.success) {
-      country = data.country;
-      code = data.country_code.toLowerCase();
-    }
-  } catch (e) {
-    console.log("geo failed");
-  }
-
-  // if still no country → don't show (or fallback)
-  if (!country) return;
-
-  const box = document.createElement("div");
-  box.className = "ana-geo";
-
-  box.innerHTML = `
-    <div class="ana-geo-inner">
-      <p class="geo-main">wait… are you in ${country}? ✦</p>
-      <p class="geo-sub">i might be closer than you think</p>
-
-      <div class="actions">
-        <a href="tour-${code}.html" class="go">show me</a>
-        <button class="stay">not now</button>
-      </div>
-    </div>
-  `;
-
-  document.body.appendChild(box);
-
-  box.querySelector(".stay").onclick = () => box.remove();
-}
-
-showGeo();
-</script>
 </body>
 </html>
