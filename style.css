@@ -523,4 +523,50 @@ footer {
 .signup-back:hover {
   color: var(--text-main); /* optional: change to cream on hover */
 }
+.tour-container {
+  max-width: 620px;
+  margin: 100px auto;
+  padding: 0 24px;
+}
 
+.tour-title {
+  font-family: 'Exmouth';
+  font-size: 2.6rem;
+  margin-bottom: 6px;
+}
+
+.tour-subtitle {
+  font-size: 1rem;
+  opacity: 0.6;
+  margin-bottom: 36px;
+}
+
+/* reuse your soft block but refine spacing */
+.soft-block-left {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  text-align: left;
+  padding: 28px;
+
+  border: 1px solid rgba(232, 223, 211, 0.25);
+  background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(2px);
+
+  margin-bottom: 18px;
+}
+
+.soft-block-left p {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 0.95rem;
+}
+
+/* optional: tiny star accent */
+.soft-block-left .floating-star {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  opacity: 0.3;
+}
