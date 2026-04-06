@@ -500,7 +500,6 @@ footer {
   color: var( --bg-dark);
 }
 
-}
 /* HERO TEXT STACKING */
 .hero-text {
   display: flex;           /* if not already */
