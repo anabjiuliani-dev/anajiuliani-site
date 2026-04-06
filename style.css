@@ -393,13 +393,6 @@ footer {
   background: rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(2px);
 }
-  .soft-block-left {
-  text-align: left;
-  padding: 36px 28px;
-  border: 1px solid rgba(232, 223, 211, 0.25);
-  background: rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(2px);
-}
 .soft-button {
   display: inline-flex;
   align-items: center;
