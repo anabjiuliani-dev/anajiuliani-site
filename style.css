@@ -1,15 +1,15 @@
 /* =========================
-   VARIABLES — VISUAL SYSTEM
+   VARIABLES
 ========================= */
 
 :root {
-  --bg-dark: #2a2018;        /* deep espresso brown */
-  --text-main: #e8dfd3;      /* warm parchment */
-  --text-soft: #cfc4b4;      /* softer secondary text */
-  --hover-brown: #2a2018;    /* warm chestnut hover */
-  --shadow-soft: rgba(0, 0, 0, 0.28);
+  --bg-dark: #2a2018;
+  --paper: #e6dccb;
+  --ink: #3a2f26;
+  --text-main: #e8dfd3;
+  --text-soft: #cfc4b4;
+  --shadow: rgba(0,0,0,0.35);
 }
-
 
 /* =========================
    FONTS
@@ -21,67 +21,33 @@
 }
 
 @font-face {
-  font-family: 'Antro';
-  src: url("fonts/Antro_Vectra.otf");
-}
-
-@font-face {
-  font-family: 'News';
-  src: url("fonts/OldNewspaperTypes.ttf");
-}
-
-@font-face { font-family: 'Wonderland'; 
-            src: url("fonts/Beyond Wonderland.ttf"); 
-} 
-
-@font-face { font-family: 'Exmouth'; 
-            src: url("fonts/exmouth_.ttf"); 
+  font-family: 'Exmouth';
+  src: url("fonts/exmouth_.ttf");
 }
 
 /* =========================
-   GLOBAL RESET
+   BASE
 ========================= */
 
 * {
   box-sizing: border-box;
 }
 
-/* STAR CURSOR */
-body {
-  cursor: url("data:image/svg+xml;utf8,\
-<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24'>\
-<path d='M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z' fill='%23e8dfd3'/>\
-</svg>") 9 9, auto;
-}
-
-
 body {
   margin: 0;
-  color: var(--text-main);
   font-family: 'Zai';
-  font-size: 18px;
-  line-height: 1.7;
+  color: var(--text-main);
+  line-height: 1.6;
 
   background:
-    linear-gradient(
-      rgba(42, 32, 24, 0.85),
-      rgba(42, 32, 24, 0.85)
-    ),
+    linear-gradient(rgba(42,32,24,0.85), rgba(42,32,24,0.85)),
     url("images/bg.jpg");
 
   background-size: cover;
-  background-position: center;
   background-attachment: fixed;
 }
 
-
-
-
-
-/* =========================
-   GRAIN OVERLAY
-========================= */
-
+/* grain */
 body::before {
   content: "";
   position: fixed;
@@ -89,63 +55,36 @@ body::before {
   pointer-events: none;
   z-index: 9999;
 
-  background-image:
+  background:
     repeating-radial-gradient(
       circle at 0 0,
-      rgba(255,255,255,0.035) 0,
-      rgba(255,255,255,0.035) 1px,
+      rgba(255,255,255,0.03) 0,
+      rgba(255,255,255,0.03) 1px,
       transparent 1px,
       transparent 2px
     );
-
-  mix-blend-mode: overlay;
-  opacity: 0.06;
 }
 
-
 /* =========================
-   HEADER / NAV
+   HEADER
 ========================= */
 
 .masthead {
   text-align: center;
-  padding: 18px 20px 14px;
-  border-bottom: 2px solid rgba(244, 239, 232, 0.25);
+  padding: 18px;
+  border-bottom: 1px solid rgba(232,223,211,0.2);
 }
 
 .logo {
   font-family: 'Exmouth';
   font-size: 3rem;
-  margin: 0;
-}
-
-nav {
-  margin-top: 8px;
 }
 
 nav a {
-  margin: 0 12px;
-  text-decoration: none;
+  margin: 0 10px;
   color: var(--text-soft);
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-  position: relative;
-}
-
-nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 100%;
-  height: 1px;
-  background: var(--text-main);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-nav a:hover::after {
-  opacity: 0.8;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 
 /* =========================
@@ -153,19 +92,13 @@ nav a:hover::after {
 ========================= */
 
 .hero {
-  font-family: 'Zai';
   display: flex;
-  align-items: flex-start;  /* align text closer to top */
   justify-content: center;
-  text-align: center;
-  min-height: 40vh;         /* reduce height so it’s closer */
-  margin-top: 20px;         /* optional spacing from header */
-  padding: 0;               /* remove previous padding */
+  margin-top: 40px;
 }
 
 .hero-text {
-  max-width: 680px;
-  font-size: 1.3rem;        /* slightly bigger if needed */
+  text-align: center;
 }
 
 /* =========================
@@ -175,429 +108,147 @@ nav a:hover::after {
 .columns {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 40px;
- padding: 40px 40px;
+  gap: 70px;
+  padding: 70px 50px;
 }
 
 /* =========================
-   BUTTONS / LINKS
+   ✦ NOTES (MAIN FEATURE)
 ========================= */
 
-.paper-button,
-.video-soft-link,
-.signup-soft-button {
-  display: inline-block;
-  padding: 12px 28px;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  color: var(--text-main);
-  border: 1px solid var(--text-main);
-  background: transparent;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.paper-button:hover,
-.video-soft-link:hover,
-.signup-soft-button:hover {
-  background: var(--hover-brown);
-  border-color: var(--hover-brown);
-}
-
-/* =========================
-   ALBUM (HOME)
-========================= */
-
-.album-wrapper {
+.soft-block {
   position: relative;
-  display: inline-block;
+  padding: 34px 28px;
+
+  background: var(--paper);
+  color: var(--ink);
+
+  clip-path: polygon(
+    0% 6%, 4% 2%, 12% 5%, 20% 0%, 32% 4%, 45% 2%, 
+    60% 6%, 75% 1%, 88% 4%, 100% 6%,
+    100% 94%, 95% 100%, 85% 96%, 70% 100%, 
+    55% 95%, 40% 98%, 25% 94%, 12% 100%, 
+    5% 95%, 0% 94%
+  );
+
+  box-shadow:
+    0 12px 35px var(--shadow),
+    inset 0 0 40px rgba(0,0,0,0.06);
+
+  transform: rotate(-1deg);
 }
 
-.album-cover {
-  width: 290px;
-  max-width: 85vw;
-  transform: ;
-  box-shadow: 0 18px 40px var(--shadow-soft);
-  transition: transform 0.6s ease;
+/* randomness */
+.soft-block:nth-child(2) {
+  transform: rotate(1.8deg) translateY(-10px);
+}
+.soft-block:nth-child(3) {
+  transform: rotate(-1.2deg) translateY(6px);
 }
 
-.album-wrapper:hover .album-cover {
-  transform:  translateY(-8px);
-}
-
-.album-note {
+/* paper texture */
+.soft-block::after {
+  content: "";
   position: absolute;
-  bottom: -36px;
-  right: -18px;
-  font-family: 'Antro';
-  font-size: 1.4rem;
-  opacity: 0.85;
+  inset: 0;
+
+  background:
+    radial-gradient(circle at 20% 10%, rgba(255,255,255,0.3), transparent 40%),
+    radial-gradient(circle at 80% 90%, rgba(0,0,0,0.08), transparent 50%);
+
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+/* text */
+.soft-block h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  transform: rotate(-0.5deg);
+}
+
+.soft-block p {
+  transform: rotate(-0.3deg);
 }
 
 /* =========================
-   TRACKS
+   BUTTON (paper style)
 ========================= */
 
-.tracks-soft {
-  padding: 80px 40px;
-  text-align: center;
-}
-
-.tracks-whisper {
-  font-family: 'Zai';
-  opacity: 1.2;
-  margin-bottom: 60px;
-}
-
-.tracks-flow {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 80px;
-}
-
-.track-card {
-  position: relative;
-  text-decoration: none;
-  color: var(--text-cream);
-  transition: transform 0.4s ease;
-}
-
-.track-card img {
-  width: 240px;
-  box-shadow: 0 14px 32px var(--shadow-soft);
-}
-
-.track-card:hover {
-  transform: translateY(-10px);
-}
-
-.track-title {
-  display: block;
+.soft-button {
+  display: inline-block;
   margin-top: 16px;
+  padding: 10px 18px;
+
+  font-size: 0.8rem;
+  text-decoration: none;
+
+  border: 1px solid rgba(58,47,38,0.6);
+  color: var(--ink);
+
+  background: rgba(255,255,255,0.2);
 }
 
-.track-star {
-  position: absolute;
-  top: -14px;
-  right: -14px;
+.soft-button:hover {
+  transform: translateY(-2px);
 }
 
 /* =========================
-   VIDEO / EMPTY SPACES
+   SOCIALS
 ========================= */
 
-.video-soft,
-.signup-soft {
-  min-height: 80vh;
+.socials {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 32px; /* slightly bigger gap for breathing space */
-  text-align: center;
-  padding: 60px 20px;
+  gap: 10px;
 }
 
-.video-whisper,
-.signup-whisper {
-  font-family: 'Zai', cursive;
-  font-size: 1.8rem; /* slightly bigger */
-  opacity: 0.9;
-  line-height: 1.4;
-  max-width: 600px;
-}
-
-.video-text,
-.signup-text {
-  font-family: 'Zai', serif;
-  font-size: 1.3rem; /* slightly bigger */
-  opacity: 0.85;
-  line-height: 1.5;
-  max-width: 500px;
-}
-.video-soft-link,
-.signup-soft-button {
-  font-family: 'Exmouth';
-  font-size: 1.7rem;
-  color: var(--text-main);
+.socials a {
+  color: var(--ink);
   text-decoration: none;
-  border-bottom: 1px dashed var(--text-main);
-  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
-.video-soft-link:hover,
-.signup-soft-button:hover {
-  color: var(--text-main);
-  border-color: var(--hover-brown);
+/* =========================
+   TOUR PAGE (MATCH NOTES)
+========================= */
+
+.tour-container {
+  max-width: 600px;
+  margin: 100px auto;
+  padding: 0 20px;
 }
+
+.tour-title,
+.tour-subtitle {
+  text-align: center;
+}
+
+.soft-block-left {
+  position: relative;
+  padding: 24px;
+  margin-bottom: 28px;
+
+  background: var(--paper);
+  color: var(--ink);
+
+  clip-path: polygon(
+    0% 6%, 4% 2%, 12% 5%, 20% 0%, 32% 4%, 
+    45% 2%, 60% 6%, 75% 1%, 88% 4%, 100% 6%,
+    100% 94%, 95% 100%, 85% 96%, 70% 100%, 
+    55% 95%, 40% 98%, 25% 94%, 12% 100%, 
+    5% 95%, 0% 94%
+  );
+
+  box-shadow: 0 10px 28px var(--shadow);
+  transform: rotate(-0.8deg);
+}
+
 /* =========================
    FOOTER
 ========================= */
 
 footer {
   text-align: center;
-  padding: 40px 20px;
-  font-size: 0.75rem;
+  padding: 40px;
   opacity: 0.6;
-}
-
-/* =========================
-   FLOATING STARS
-========================= */
-
-.stars span,
-.floating-star {
-  position: fixed;
-  font-size: 1rem;
-  opacity: 0.4;
-  animation: drift 12s ease-in-out infinite;
-}
-
-.stars span:nth-child(1) { top: 20%; left: 8%; }
-.stars span:nth-child(2) { top: 60%; left: 90%; animation-delay: 3s; }
-.stars span:nth-child(3) { top: 80%; left: 20%; animation-delay: 6s; }
-
-@keyframes drift {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-14px); }
-  100% { transform: translateY(0); }
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 768px) {
-  .logo {
-    font-size: 2.4rem;
-  }
-
-  .hero-text {
-    font-size: 1.5rem;
-  }
-
-  nav a {
-    font-size: 0.7rem;
-    margin: 0 8px;
-  }
-
-  .tracks-flow {
-    gap: 60px;
-  }
-}
-.soft-block {
-  position: relative;
-  padding: 32px 26px;
-
-  background: #e8dfd3;
-  color: #2a2018;
-
-  clip-path: polygon(
-    0% 5%, 3% 0%, 10% 4%, 18% 0%, 26% 6%, 35% 2%, 45% 5%, 
-    55% 0%, 65% 6%, 75% 2%, 85% 5%, 95% 0%, 100% 5%,
-    100% 95%, 97% 100%, 90% 96%, 82% 100%, 74% 94%, 
-    65% 98%, 55% 95%, 45% 100%, 35% 94%, 25% 98%, 
-    15% 95%, 5% 100%, 0% 95%
-  );
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-}
-.soft-button {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-
-  margin-top: 24px;
-  padding: 14px 36px;
-
-  font-size: 1rem;
-  letter-spacing: 1.2px;
-
-  color: var(--text-main);
-  border: 1px solid var(--text-main);
-  text-decoration: none;
-
-  background: rgba(0, 0, 0, 0.15);
-  transition: all 0.35s ease;
-   
-}.soft-block:nth-child(2) {
-  transform: rotate(1.2deg);
-}
-
-.soft-block:nth-child(3) {
-  transform: rotate(-0.5deg);
-}.soft-block h3 {
-  font-family: 'Zai';
-  color: #3a2f26;
-}
-
-.soft-block p {
-  color: #3a2f26;
-  line-height: 1.6;
-}
-.soft-button {
-  border: 1px solid #2a2018;
-  color: #2a2018;
-  background: transparent;
-}
-.soft-button:hover {
-  background: rgba(42,32,24,0.1);
-}
-.soft-button .star {
-  font-size: 0.90rem;
-  opacity: 0.7;
-  transition: transform 0.35s ease, opacity 0.35s ease;
-}
-
-.soft-button:hover .star {
-  transform: rotate(25deg) scale(1.1);
-  opacity: 1;
-}
-.socials {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 22px;
-}
-
-.socials a {
-  color: var(--text-soft);
-  text-decoration: none;
-  font-size: 1.2rem;
-  letter-spacing: 0.6px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-.socials a:hover {
-  color: var(--text-main);
-  transform: translateX(4px);
-}
-/* =========================
-   SOFT BLOCK TITLES
-========================= */
-
-.soft-block h3 {
-  font-family: 'Zai';  /* elegant, humanist serif */
-  font-size: 1.5rem;                 /* bigger than before */
-  line-height: 1.2;
-  margin-bottom: 18px;
-  letter-spacing: 0.5px;
-  color: #3a2f26;
-}
-
-/* =========================
-   ALBUM HOVER BUTTON
-========================= */
-
-.album-wrapper {
-  position: relative;
-  display: inline-block;
-}
-
-.album-cover {
-  display: block;
-  width: 380px;
-  max-width: 85vw;
-  transform: rotate(0deg);
-  filter: grayscale(30%);
-  box-shadow: 0 18px 40px var(--shadow-soft);
-  transition: transform 0.6s ease, filter 0.4s ease;
-}
-
-.album-wrapper:hover .album-cover {
-  transform: rotate(0deg) translateY(-8px);
-  filter: grayscale(0%);
-}
-
-/* =========================
-   ALBUM BUTTON — text only
-========================= */
-
-.album-hover {
-  display: inline-block;
-  margin-top: 12px;           /* space under the album */
-  font-family: 'Zai', cursive;
-  font-size: 1.2rem;
-  color: var(--text-main);
-  text-decoration: none;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-/* hover effect */
-.album-hover:hover {
-  color: var( --bg-dark);
-}
-
-/* HERO TEXT STACKING */
-.hero-text {
-  display: flex;           /* if not already */
-  flex-direction: column;  /* stack children vertically */
-  align-items: center;     /* center horizontally */
-  gap: 24px;               /* space between title and album */
-  text-align: center;
-}
-/* =========================
-   BACK LINK
-========================= */
-
-.signup-back {
-  font-family: 'Zai', serif;
-  font-size: 1.4rem;
-  color: var(--bg-dark); /* brown text */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.signup-back:hover {
-  color: var(--text-main); /* optional: change to cream on hover */
-}
-.tour-container {
-  max-width: 620px;
-  margin: 100px auto;
-  padding: 0 24px;
-}
-
-.tour-title {
-  font-family: 'Zai';
-  align: center;
-  font-size: 1.6rem;
-  margin-bottom: 6px;
-}
-
-.tour-subtitle {
-  font-size: 1rem;
-  align:center;
-  opacity: 0.6;
-  margin-bottom: 36px;
-}
-
-/* reuse your soft block but refine spacing */
-.soft-block-left {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-
-  text-align: left;
-  padding: 28px;
-
-  border: 1px solid rgba(232, 223, 211, 0.25);
-  background: rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(2px);
-
-  margin-bottom: 18px;
-}
-
-.soft-block-left p {
-  margin: 0;
-  opacity: 0.7;
-  font-size: 0.95rem;
-}
-
-/* optional: tiny star accent */
-.soft-block-left .floating-star {
-  position: absolute;
-  right: 18px;
-  top: 18px;
-  opacity: 0.3;
 }
