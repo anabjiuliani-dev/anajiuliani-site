@@ -573,18 +573,15 @@ footer {
   opacity: 0.3;
 }
 .ana-geo {
-  z-index: 10000;
   position: fixed;
-  bottom: 24px;
-  left: 24px;
+  bottom: 20px;
+  left: 20px;
+  z-index: 999999; /* ABOVE EVERYTHING */
 }
+
 .ana-geo-inner {
-  padding: 16px;
-  width: 240px;
-
-  background: rgba(0,0,0,0.6);
-  color: var(--text-main);
-
-  border: 1px solid rgba(232,223,211,0.3);
-  backdrop-filter: blur(6px);
+  background: black;
+  color: white;
+  padding: 20px;
+  border: 2px solid red; /* so you DEFINITELY see it */
 }
