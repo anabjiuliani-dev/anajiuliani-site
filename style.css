@@ -394,8 +394,6 @@ footer {
   backdrop-filter: blur(2px);
 }
   .soft-block-left {
-  display: flex;
-  flex-direction: column;   
   text-align: left;
   padding: 36px 28px;
   border: 1px solid rgba(232, 223, 211, 0.25);
