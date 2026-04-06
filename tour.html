@@ -43,36 +43,41 @@
     </article>
 
   </main>
- <script>
+<script>
 async function showGeo() {
+  let country = "somewhere";
+  let code = "us";
+
   try {
     const res = await fetch("https://ipapi.co/json/");
     const data = await res.json();
 
-    if (!data.country_name) return;
-
-    const box = document.createElement("div");
-    box.className = "ana-geo";
-
-    box.innerHTML = `
-      <div class="ana-geo-inner">
-        <p>hey… are you in ${data.country_name}? ✦</p>
-        <p class="sub">i might have something closer to you</p>
-
-        <div class="actions">
-          <a href="tour-${data.country_code.toLowerCase()}.html" class="go">show me</a>
-          <button class="stay">i'll stay here</button>
-        </div>
-      </div>
-    `;
-
-    document.body.appendChild(box);
-
-    box.querySelector(".stay").onclick = () => box.remove();
-
+    if (data.country_name) {
+      country = data.country_name;
+      code = data.country_code.toLowerCase();
+    }
   } catch (e) {
-    console.log("geo failed:", e);
+    console.log("geo failed, using fallback");
   }
+
+  const box = document.createElement("div");
+  box.className = "ana-geo";
+
+  box.innerHTML = `
+    <div class="ana-geo-inner">
+      <p>hey… are you in ${country}? ✦</p>
+      <p class="sub">i might have something closer to you</p>
+
+      <div class="actions">
+        <a href="tour-${code}.html" class="go">show me</a>
+        <button class="stay">i'll stay here</button>
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(box);
+
+  box.querySelector(".stay").onclick = () => box.remove();
 }
 
 showGeo();
