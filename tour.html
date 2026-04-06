@@ -45,32 +45,35 @@
   </main>
 <script>
 async function showGeo() {
-  let country = "somewhere";
-  let code = "us";
+  let country = "";
+  let code = "";
 
   try {
-    const res = await fetch("https://ipapi.co/json/");
+    const res = await fetch("https://ipwho.is/");
     const data = await res.json();
 
-    if (data.country_name) {
-      country = data.country_name;
+    if (data.success) {
+      country = data.country;
       code = data.country_code.toLowerCase();
     }
   } catch (e) {
-    console.log("geo failed, using fallback");
+    console.log("geo failed");
   }
+
+  // if still no country → don't show (or fallback)
+  if (!country) return;
 
   const box = document.createElement("div");
   box.className = "ana-geo";
 
   box.innerHTML = `
     <div class="ana-geo-inner">
-      <p>hey… are you in ${country}? ✦</p>
-      <p class="sub">i might have something closer to you</p>
+      <p class="geo-main">wait… are you in ${country}? ✦</p>
+      <p class="geo-sub">i might be closer than you think</p>
 
       <div class="actions">
         <a href="tour-${code}.html" class="go">show me</a>
-        <button class="stay">i'll stay here</button>
+        <button class="stay">not now</button>
       </div>
     </div>
   `;
