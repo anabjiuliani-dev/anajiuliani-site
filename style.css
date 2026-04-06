@@ -574,14 +574,29 @@ footer {
 }
 .ana-geo {
   position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 999999; /* ABOVE EVERYTHING */
+  bottom: 24px;
+  left: 24px;
+  z-index: 100000; /* higher than your overlay */
+}
+.ana-geo-inner {
+  padding: 16px 18px;
+  width: 240px;
+
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(232, 223, 211, 0.25);
+
+  font-size: 0.85rem;
+  line-height: 1.4;
 }
 
-.ana-geo-inner {
-  background: black;
-  color: white;
-  padding: 20px;
-  border: 2px solid red; /* so you DEFINITELY see it */
+.ana-geo .sub {
+  opacity: 0.6;
+  font-size: 0.75rem;
+}
+
+.ana-geo .actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
 }
