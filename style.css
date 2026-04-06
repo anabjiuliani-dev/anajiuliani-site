@@ -228,7 +228,7 @@ nav a:hover::after {
   transform: none !important;
   transition: none !important;
 
-  box-shadow: 0 18px 40px var(--shadow-soft);
+  
 }
 
 /* overlay */
