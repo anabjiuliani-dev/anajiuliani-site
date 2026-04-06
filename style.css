@@ -221,7 +221,7 @@ nav a:hover::after {
   transition: transform 0.6s ease;
 }
 
-.album-wrapper:hover .album-cover {
+.album-cover:hover {
   transform: rotate(0deg) translateY(-8px);
 }
 
