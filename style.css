@@ -3,12 +3,13 @@
 ========================= */
 
 :root {
-  --bg-dark: #2a2018;
-  --text-main: #e8dfd3;
-  --text-soft: #cfc4b4;
-  --hover-brown: #2a2018;
+  --bg-dark: #2a2018;        /* deep espresso brown */
+  --text-main: #e8dfd3;      /* warm parchment */
+  --text-soft: #cfc4b4;      /* softer secondary text */
+  --hover-brown: #2a2018;    /* warm chestnut hover */
   --shadow-soft: rgba(0, 0, 0, 0.28);
 }
+
 
 /* =========================
    FONTS
@@ -29,23 +30,30 @@
   src: url("fonts/OldNewspaperTypes.ttf");
 }
 
-@font-face {
-  font-family: 'Wonderland';
-  src: url("fonts/Beyond Wonderland.ttf");
-}
+@font-face { font-family: 'Wonderland'; 
+            src: url("fonts/Beyond Wonderland.ttf"); 
+} 
 
-@font-face {
-  font-family: 'Exmouth';
-  src: url("fonts/exmouth_.ttf");
+@font-face { font-family: 'Exmouth'; 
+            src: url("fonts/exmouth_.ttf"); 
 }
 
 /* =========================
-   GLOBAL
+   GLOBAL RESET
 ========================= */
 
 * {
   box-sizing: border-box;
 }
+
+/* STAR CURSOR */
+body {
+  cursor: url("data:image/svg+xml;utf8,\
+<svg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24'>\
+<path d='M12 2l1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8z' fill='%23e8dfd3'/>\
+</svg>") 9 9, auto;
+}
+
 
 body {
   margin: 0;
@@ -66,8 +74,37 @@ body {
   background-attachment: fixed;
 }
 
+
+
+
+
 /* =========================
-   HEADER
+   GRAIN OVERLAY
+========================= */
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+
+  background-image:
+    repeating-radial-gradient(
+      circle at 0 0,
+      rgba(255,255,255,0.035) 0,
+      rgba(255,255,255,0.035) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+
+  mix-blend-mode: overlay;
+  opacity: 0.06;
+}
+
+
+/* =========================
+   HEADER / NAV
 ========================= */
 
 .masthead {
@@ -92,6 +129,23 @@ nav a {
   color: var(--text-soft);
   font-size: 1.5rem;
   letter-spacing: 1px;
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1px;
+  background: var(--text-main);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+nav a:hover::after {
+  opacity: 0.8;
 }
 
 /* =========================
@@ -99,15 +153,19 @@ nav a {
 ========================= */
 
 .hero {
+  font-family: 'Zai';
   display: flex;
+  align-items: flex-start;  /* align text closer to top */
   justify-content: center;
   text-align: center;
-  min-height: 40vh;
-  margin-top: 20px;
+  min-height: 40vh;         /* reduce height so it’s closer */
+  margin-top: 20px;         /* optional spacing from header */
+  padding: 0;               /* remove previous padding */
 }
 
 .hero-text {
   max-width: 680px;
+  font-size: 1.3rem;        /* slightly bigger if needed */
 }
 
 /* =========================
@@ -118,24 +176,223 @@ nav a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 40px;
-  padding: 40px;
+ padding: 40px 40px;
 }
 
 /* =========================
-   BLOCKS
+   BUTTONS / LINKS
 ========================= */
 
+.paper-button,
+.video-soft-link,
+.signup-soft-button {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  color: var(--text-main);
+  border: 1px solid var(--text-main);
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.paper-button:hover,
+.video-soft-link:hover,
+.signup-soft-button:hover {
+  background: var(--hover-brown);
+  border-color: var(--hover-brown);
+}
+
+/* =========================
+   ALBUM (HOME)
+========================= */
+
+.album-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.album-cover {
+  width: 290px;
+  max-width: 85vw;
+  transform: rotate(-2deg);
+  box-shadow: 0 18px 40px var(--shadow-soft);
+  transition: transform 0.6s ease;
+}
+
+.album-wrapper:hover .album-cover {
+  transform: rotate(1deg) translateY(-8px);
+}
+
+.album-note {
+  position: absolute;
+  bottom: -36px;
+  right: -18px;
+  font-family: 'Antro';
+  font-size: 1.4rem;
+  opacity: 0.85;
+}
+
+/* =========================
+   TRACKS
+========================= */
+
+.tracks-soft {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.tracks-whisper {
+  font-family: 'Zai';
+  opacity: 1.2;
+  margin-bottom: 60px;
+}
+
+.tracks-flow {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 80px;
+}
+
+.track-card {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-cream);
+  transition: transform 0.4s ease;
+}
+
+.track-card img {
+  width: 240px;
+  box-shadow: 0 14px 32px var(--shadow-soft);
+}
+
+.track-card:hover {
+  transform: translateY(-10px);
+}
+
+.track-title {
+  display: block;
+  margin-top: 16px;
+}
+
+.track-star {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+}
+
+/* =========================
+   VIDEO / EMPTY SPACES
+========================= */
+
+.video-soft,
+.signup-soft {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px; /* slightly bigger gap for breathing space */
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.video-whisper,
+.signup-whisper {
+  font-family: 'Zai', cursive;
+  font-size: 1.8rem; /* slightly bigger */
+  opacity: 0.9;
+  line-height: 1.4;
+  max-width: 600px;
+}
+
+.video-text,
+.signup-text {
+  font-family: 'Zai', serif;
+  font-size: 1.3rem; /* slightly bigger */
+  opacity: 0.85;
+  line-height: 1.5;
+  max-width: 500px;
+}
+.video-soft-link,
+.signup-soft-button {
+  font-family: 'Exmouth';
+  font-size: 1.7rem;
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--text-main);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.video-soft-link:hover,
+.signup-soft-button:hover {
+  color: var(--text-main);
+  border-color: var(--hover-brown);
+}
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+/* =========================
+   FLOATING STARS
+========================= */
+
+.stars span,
+.floating-star {
+  position: fixed;
+  font-size: 1rem;
+  opacity: 0.4;
+  animation: drift 12s ease-in-out infinite;
+}
+
+.stars span:nth-child(1) { top: 20%; left: 8%; }
+.stars span:nth-child(2) { top: 60%; left: 90%; animation-delay: 3s; }
+.stars span:nth-child(3) { top: 80%; left: 20%; animation-delay: 6s; }
+
+@keyframes drift {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 2.4rem;
+  }
+
+  .hero-text {
+    font-size: 1.5rem;
+  }
+
+  nav a {
+    font-size: 0.7rem;
+    margin: 0 8px;
+  }
+
+  .tracks-flow {
+    gap: 60px;
+  }
+}
 .soft-block {
   text-align: center;
   padding: 36px 28px;
   border: 1px solid rgba(232, 223, 211, 0.25);
   background: rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(2px);
 }
-
-/* =========================
-   BUTTON
-========================= */
-
 .soft-button {
   display: inline-flex;
   align-items: center;
@@ -152,16 +409,22 @@ nav a {
   text-decoration: none;
 
   background: rgba(0, 0, 0, 0.15);
+  transition: all 0.35s ease;
 }
-
+.soft-button:hover {
+  background: var(--hover-brown);
+  border-color: var(--hover-brown);
+}
 .soft-button .star {
+  font-size: 0.90rem;
   opacity: 0.7;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
-/* =========================
-   SOCIALS
-========================= */
-
+.soft-button:hover .star {
+  transform: rotate(25deg) scale(1.1);
+  opacity: 1;
+}
 .socials {
   display: flex;
   flex-direction: column;
@@ -172,17 +435,94 @@ nav a {
 .socials a {
   color: var(--text-soft);
   text-decoration: none;
+  font-size: 1.2rem;
+  letter-spacing: 0.6px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.socials a:hover {
+  color: var(--text-main);
+  transform: translateX(4px);
+}
+/* =========================
+   SOFT BLOCK TITLES
+========================= */
+
+.soft-block h3 {
+  font-family: 'Zai';  /* elegant, humanist serif */
+  font-size: 1.5rem;                 /* bigger than before */
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: 0.5px;
+  color: var(--text-main);
 }
 
 /* =========================
-   FOOTER
+   ALBUM HOVER BUTTON
 ========================= */
 
-footer {
+.album-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.album-cover {
+  display: block;
+  width: 380px;
+  max-width: 85vw;
+  transform: rotate(-2deg);
+  filter: grayscale(0%);
+  box-shadow: 0 18px 40px var(--shadow-soft);
+  transition: transform 0.6s ease, filter 0.4s ease;
+}
+
+.album-wrapper:hover .album-cover {
+  transform: rotate(1deg) translateY(-8px);
+  filter: grayscale(0%);
+}
+
+/* =========================
+   ALBUM BUTTON — text only
+========================= */
+
+.album-hover {
+  display: inline-block;
+  margin-top: 12px;           /* space under the album */
+  font-family: 'Zai', cursive;
+  font-size: 1.2rem;
+  color: var(--text-main);
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* hover effect */
+.album-hover:hover {
+  color: var( --bg-dark);
+}
+
+}
+/* HERO TEXT STACKING */
+.hero-text {
+  display: flex;           /* if not already */
+  flex-direction: column;  /* stack children vertically */
+  align-items: center;     /* center horizontally */
+  gap: 24px;               /* space between title and album */
   text-align: center;
-  padding: 40px 20px;
-  font-size: 0.75rem;
-  opacity: 0.6;
+}
+/* =========================
+   BACK LINK
+========================= */
+
+.signup-back {
+  font-family: 'Zai', serif;
+  font-size: 1.4rem;
+  color: var(--bg-dark); /* brown text */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.signup-back:hover {
+  color: var(--text-main); /* optional: change to cream on hover */
 }
 /* =========================
    TOUR PAGE
