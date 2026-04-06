@@ -208,17 +208,54 @@ nav a:hover::after {
    ALBUM (HOME)
 ========================= */
 
-.album-wrapper {
+
+.album-link {
   display: inline-block;
-  text-align: center; /* centers link under image */
-  line-height: 0;
+  text-decoration: none;
+}
+
+.album-wrapper {
+  position: relative;
+  display: block;
+  line-height: 0; /* removes weird spacing under image */
 }
 
 .album-cover {
   width: 290px;
   max-width: 85vw;
   display: block;
+
+  /* force NO movement */
+  transform: none !important;
+  transition: none !important;
+
   box-shadow: 0 18px 40px var(--shadow-soft);
+}
+
+/* overlay */
+.album-hover {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Antro';
+  font-size: 1.4rem;
+  color: white;
+
+
+  /* remove animation */
+  opacity: 1; /* always visible OR set to 0 if you want it hidden */
+  transition: none !important;
+}
+
+/* REMOVE ANY OLD HOVER EFFECTS */
+.album-cover:hover,
+.album-wrapper:hover .album-hover {
+  transform: none !important;
+  opacity: 1 !important;
 }
 
 .album-link {
