@@ -387,11 +387,20 @@ footer {
   }
 }
 .soft-block {
-  text-align: center;
-  padding: 36px 28px;
-  border: 1px solid rgba(232, 223, 211, 0.25);
-  background: rgba(0, 0, 0, 0.18);
-  backdrop-filter: blur(2px);
+  position: relative;
+
+  padding: 32px 26px;
+
+  background: #e8dfd3; /* paper color */
+  color: #2a2018;
+
+  border-radius: 6px;
+
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.25),
+    inset 0 0 40px rgba(0,0,0,0.05);
+
+  transform: rotate(-1deg);
 }
 .soft-button {
   display: inline-flex;
@@ -410,10 +419,29 @@ footer {
 
   background: rgba(0, 0, 0, 0.15);
   transition: all 0.35s ease;
+   
+}.soft-block:nth-child(2) {
+  transform: rotate(1.2deg);
+}
+
+.soft-block:nth-child(3) {
+  transform: rotate(-0.5deg);
+}.soft-block h3 {
+  font-family: 'Zai';
+  color: #2a2018;
+}
+
+.soft-block p {
+  color: #3a2f26;
+  line-height: 1.6;
+}
+.soft-button {
+  border: 1px solid #2a2018;
+  color: #2a2018;
+  background: transparent;
 }
 .soft-button:hover {
-  background: var(--hover-brown);
-  border-color: var(--hover-brown);
+  background: rgba(42,32,24,0.1);
 }
 .soft-button .star {
   font-size: 0.90rem;
