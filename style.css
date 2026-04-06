@@ -208,10 +208,9 @@ nav a:hover::after {
    ALBUM (HOME)
 ========================= */
 .album-wrapper {
-  display: inline-block; /* keeps wrapper inline if needed */
-  text-align: center;    /* centers link under image */
-  position: relative;    /* for overlay positioning */
-  line-height: 0;        /* removes spacing under image */
+  display: inline-block;
+  position: relative; /* for overlay */
+  line-height: 0;
 }
 
 .album-cover {
@@ -220,12 +219,10 @@ nav a:hover::after {
   display: block;
   box-shadow: 0 18px 40px var(--shadow-soft);
 
-  /* remove any transform/transition */
   transform: none !important;
   transition: none !important;
 }
 
-/* overlay stays on top of image only */
 .album-hover {
   position: absolute;
   top: 0;
@@ -241,21 +238,21 @@ nav a:hover::after {
   font-size: 1.4rem;
   color: white;
 
-  opacity: 1; /* or 0 if you want hidden initially */
+  opacity: 1;
   transition: none !important;
 
-  pointer-events: none; /* <<< this is key: allows clicks to pass through overlay */
+  pointer-events: none; /* so clicks pass through overlay */
 }
 
-/* link under the image */
 .album-link {
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 0.5rem; /* space between image and link */
   font-family: 'Antro';
   font-size: 1.2rem;
   color: #fff;
   text-decoration: none;
   opacity: 0.85;
+  text-align: center;
   transition: opacity 0.3s;
 }
 
