@@ -1,0 +1,23 @@
+<main class="tour-container">
+
+  <h1 class="tour-title">Ana on tour ✦</h1>
+  <p class="tour-subtitle">maybe i'm coming closer than you think</p>
+
+  <article class="soft-block-left">
+    <h3>São Paulo</h3>
+    <p>august 12 · cine joia</p>
+    <a href="#" class="soft-button">
+      tickets <span class="star">✦</span>
+    </a>
+    <span class="floating-star">✦</span>
+  </article>
+
+  <article class="soft-block-left">
+    <h3>Rio de Janeiro</h3>
+    <p>august 18 · sacadura 154</p>
+    <a href="#" class="soft-button">
+      tickets <span class="star">✦</span>
+    </a>
+  </article>
+
+</main>
