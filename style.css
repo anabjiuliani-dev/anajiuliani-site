@@ -574,9 +574,11 @@ footer {
 }
 .ana-geo {
   position: fixed;
-  bottom: 24px;
-  left: 24px;
-  z-index: 100000; /* higher than your overlay */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 100000; /* above your grain overlay */
 }
 .ana-geo-inner {
   padding: 16px 18px;
