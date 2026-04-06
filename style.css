@@ -208,7 +208,11 @@ nav a:hover::after {
    ALBUM (HOME)
 ========================= */
 
-
+.album-wrapper {
+  display: inline-block;
+  text-align: center; /* centers link under image */
+  line-height: 0;
+}
 .album-link {
   display: inline-block;
   text-decoration: none;
