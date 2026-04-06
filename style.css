@@ -244,7 +244,6 @@ nav a:hover::after {
   font-size: 1.4rem;
   color: white;
 
-  background: rgba(0, 0, 0, 0.25);
 
   /* remove animation */
   opacity: 1; /* always visible OR set to 0 if you want it hidden */
