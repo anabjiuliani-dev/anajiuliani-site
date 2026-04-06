@@ -221,7 +221,7 @@ nav a:hover::after {
 }
 
 .album-cover:hover {
-   translateY(-8px);
+  transform: translateY(-8px);
 }
 
 .album-note {
