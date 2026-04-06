@@ -222,7 +222,7 @@ nav a:hover::after {
 }
 
 .album-wrapper:hover .album-cover {
-  transform: rotate(1deg) translateY(-8px);
+  transform:  translateY(-8px);
 }
 
 .album-note {
