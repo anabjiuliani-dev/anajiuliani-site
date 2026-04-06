@@ -400,7 +400,6 @@ footer {
   background: rgba(0, 0, 0, 0.18);
   backdrop-filter: blur(2px);
 }
-}
 .soft-button {
   display: inline-flex;
   align-items: center;
