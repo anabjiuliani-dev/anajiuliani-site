@@ -597,3 +597,23 @@ a:visited {
 a:hover {
   color: var(--text-main);
 }
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0;
+  color: #c9a96e;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #c9a96e;
+  margin: 0 10px;
+}
+
+.divider span {
+  font-size: 14px;
+}
